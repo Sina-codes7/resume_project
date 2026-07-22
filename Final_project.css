@@ -787,11 +787,11 @@ html.dark .toggle-moon {
 /* ------------------- FOOTER ----------------- */
 .footer {
     background: var(--bg-secondary);
-    padding: 3rem 0;
+    padding: 1rem 0;
     border-top: 1px solid var(--border-color);
     text-align: center;
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 0.90rem;
 }
 
 /* ------------- RESPONSIVE --------------- */
@@ -802,7 +802,11 @@ html.dark .toggle-moon {
 
     .header {
         margin: 0.5rem;
-        padding: 1rem 0;
+    }
+
+    .header , .container {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
     }
 
     .header-left {
@@ -829,8 +833,9 @@ html.dark .toggle-moon {
     }
 
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
+        margin-bottom: 3rem;
     }
 
     .section-title {
@@ -840,23 +845,45 @@ html.dark .toggle-moon {
 
     .about-grid {
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
         gap: 2rem;
+        margin-top: 3rem;
     }
 
     .about-image {
+        grid-column: 1 /2;
+        grid-row: 2;
         height: 300px;
     }
 
     .about-features {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: 1;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
 
+    .feedback-section {
+        margin-top: 3rem;
+    }
+
+    #contact {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
     .contact-links {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
         align-items: stretch;
     }
 
