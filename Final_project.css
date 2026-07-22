@@ -424,6 +424,7 @@ html.dark .toggle-moon {
 .skill-card:hover {
     border-color: var(--light-color);
     transform: translateY(-4px);
+    
 }
 
 .skill-name {
@@ -912,5 +913,20 @@ html.dark .toggle-moon {
 
     .section-title {
         font-size: 1.5rem;
+    }
+
+    .skills-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        margin-bottom: 2rem;
+        grid-template-rows: 1fr;
+
+    }
+
+
+    .about-features {
+        grid-template-columns: 1fr;
     }
 }
