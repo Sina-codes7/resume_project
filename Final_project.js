@@ -1,8 +1,8 @@
-// Theme Toggle
+
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 
-// Check saved preference
+
 const savedTheme = localStorage.getItem('theme') || 'light';
 if (savedTheme === 'dark') {
     html.classList.add('dark');
@@ -14,7 +14,7 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', currentTheme);
 });
 
-// Hide loader
+
 window.addEventListener('load', () => {
     const loader = document.getElementById('loaderOverlay');
     setTimeout(() => {
@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
     }, 1500);
 });
 
-// Smooth animations on scroll
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -38,7 +38,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all cards
+
 document.querySelectorAll('.skill-card, .feedback--card, .feature').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
@@ -46,7 +46,7 @@ document.querySelectorAll('.skill-card, .feedback--card, .feature').forEach(el =
     observer.observe(el);
 });
 
-// Smooth scroll for anchor links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -56,11 +56,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-// Feedback System
+
 const feedbackForm = document.getElementById('feedbackForm');
 const feedbackList = document.getElementById('feedbackList');
 
-// Load feedback from localStorage
+
 function loadFeedback() {
     const savedFeedback = localStorage.getItem('siteFeedback');
     const feedback = savedFeedback ? JSON.parse(savedFeedback) : [];
@@ -94,7 +94,7 @@ function loadFeedback() {
 
         feedbackList.appendChild(feedbackCard);
 
-        // Trigger animation
+
         setTimeout(() => {
             feedbackCard.style.opacity = '1';
             feedbackCard.style.transform = 'translateY(0)';
@@ -102,7 +102,7 @@ function loadFeedback() {
     });
 }
 
-// Save new feedback
+
 feedbackForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -128,25 +128,25 @@ feedbackForm.addEventListener('submit', (e) => {
 
     localStorage.setItem('siteFeedback', JSON.stringify(feedback));
 
-    // Clear form
+
     feedbackForm.reset();
 
-    // Reload
+    
     loadFeedback();
 
-    // Show success message
+
     alert('Thank you for your feedback! 🎉');
 });
 
-// Initial load
+
 loadFeedback();
 const lenis = new Lenis({
-  duration: 0.5,         // Animation duration
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
-  direction: 'vertical', // Scroll direction
+  duration: 0.5,         
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+  direction: 'vertical', 
   gestureDirection: 'vertical',
   smooth: true,
-  smoothTouch: false,    // Disable smooth scrolling on touch devices
+  smoothTouch: false,    
 });
 
 function raf(time) {
