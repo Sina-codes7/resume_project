@@ -1,142 +1,214 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Project_Uni.css">
-    <link rel="shortcut icon" href="icons/programmer-icon.svg" type="image/x-icon">
-    <title>devmagic</title>
+    <link rel="stylesheet" href="Final_project.css">
+    <link rel="shortcut icon" href="icons/favicon.jpg" type="image/x-icon">
+    <title>Resume</title>
+
 </head>
 
 <body>
-    
-     <div class="loader-overlay">
+    <!-- Loader -->
+    <div class="loader-overlay" id="loaderOverlay">
         <div class="loader"></div>
+        <p class="loader-text">DevMagic Loading...</p>
     </div>
-    
-    <div class="container">
-        <header class="header">
-            <div class="header_logo">
-                <p class="logo">DevMagic</p>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container"
+            style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0;">
+            <div class="header-left">
+                <a href="#" class="header-logo">Devmagic</a>
+                <nav>
+                    <ul class="header-nav">
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#feedback">Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="header_item">
-                <ul class="items">
-                    <li class="item-link"><a href="#skills">Skills</a></li>
-                    <li class="item-link"><a href="#">Work Sample</a></li>
-                    <li class="item-link"><a href="#">Our Services</a></li>
-                    <li class="item-link"><a href="#profile">Profile</a></li>
-                </ul>
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">
+                    <span class="theme-toggle-circle">
+                        <span class="theme-toggle-icon toggle-sun"></span>
+                        <span class="theme-toggle-icon toggle-moon"></span>
+                    </span>
+                </button>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <main class="main">
-            <section class="main_left" id="profile">
-                <div class="profile-top">
-                    <div class="profile_image">
-                        <img class="image" src="pictures/final.png" alt="profile image">
-                    </div>
-                    <div class="profile_name">
-                        <h2 class="name">Mr.Sina Samadian</h2>
-                        <p class="profile_job">Front-End Developer</p>
-                    </div>
+    <!-- Hero Section -->
+    <section class="container">
+        <div class="my-information">
+            <div class="hero-content">
+                <h1>Frontend Developer & <span class="light-color">UI Designer</span></h1>
+                <p>I craft beautiful, functional web experiences. Specialized in modern UI design and responsive
+                    development with a focus on user experience.</p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary">View My Work</button>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                 </div>
-                <div class="profile_bottom">
-                    <p class="descript">I'm Sina Samadian, 22 years old, an undergraduate student in Computer
-                        Engineering (Software major). I'm passionate about designing beautiful user
-                        interfaces and implementing front-end development. I'm always striving to learn new technologies
-                        and improve user experience. My goal is to build websites that are both efficient and visually
-                        impressive.</p>
-                    <div class="profile_skills">
-                        <div class="skills">UI Designer</div>
-                        <div class="skills">Fast</div>
-                        <div class="skills">Team Work</div>
-                        <div class="skills">Accuracy</div>
-                        <div class="skills">Purposeful</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="main_right-top" id="skills">
-
-                 <h3 class="name_skill">My Skills</h3>
-                <div class="range_skills">
-                    <p class="name_bar">UI</p>
-                    <div class="range">
-                        <span class="bar one"></span>
-                    </div>
-                    <p class="name_bar">HTML</p>
-                    <div class="range">
-                        <span class="bar two"></span>
-                    </div>
-                    <p class="name_bar">CSS</p>
-                    <div class="range">
-                        <span class="bar three"></span>
-                    </div>
-                    <p class="name_bar">JavaScript</p>
-                    <div class="range">
-                        <span class="bar four"></span>
-                    </div>
-                </div>
-                <p>SOON...</p>
-            </section>
-
-            <section class="main_right-bottom">
-                <h3 class="contact">Connect with me</h3>
-                <div class="connect_way">
-                    <div class="connect">
-
-                        <a href="https://instagram.com/_.mr.sinaa" class="link_connect" target="_blank">
-                            <p class="connect_media">@_.mr.sinaa</p>
-                            <img src="icons/Instagram-neon.webp" alt="instagram" class="link_connect-img">
-                        </a>
-
-                        <a href="https://t.me/CNA_SM7" class="link_connect" target="_blank">
-                            <p class="connect_media">@CNA_SM7</p>
-                            <img src="icons/Telegram-neon.webp" alt="telegram" class="link_connect-img">
-                        </a>
-
-                        <a href="https://linkedin.com/in/sinasamadian" class="link_connect" target="_blank">
-                            <p class="connect_media">@SinaSamadian</p>
-                            <img src="icons/Linkedin-neon.webp" alt="linkedin" class="link_connect-img">
-                        </a>
-
-                        <a href="mailto:Sinasamadian7@gmail.com" class="link_connect">
-                            <p class="connect_media">Sinasamadian7@gmail.com</p>
-                            <img src="icons/Email-neon.webp" alt="gmail" class="link_connect-img">
-                        </a>
-
-                        <a href="tel:+989192821689" class="link_connect">
-                            <p class="connect_media">Contact me</p>
-                            <img  src="icons/Call-phone-neon.webp" alt="call" class="link_connect-img">
-                        </a>
-
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <section class="comments-section">
-            <h3 class="comments-title">Your opinion to improve resume</h3>
-
-            <div class="comment-form">
-                <input type="text" id="commentName" class="comment-input" placeholder="Your name" maxlength="40" />
-                <textarea id="commentText" class="comment-textarea" placeholder="Write your comment..."
-                    maxlength="300"></textarea>
-                <button class="comment-submit" onclick="submitComment()">Post a comment</button>
             </div>
+            <!-- <div class="hero-image">
+                <img src="/Icons/profile_2.jpg" alt="Sina Samadian">
+                <div class="image-badge">Frontend Dev</div>
+            </div> -->
+        </div>
+    </section>
 
-            <div class="comments-list" id="commentsList">
-                <!-- نظرات اینجا اضافه میشن -->
+    <!-- Skills Section -->
+    <section class="section container" id="skills">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-name">UI/UX Design</div>
+                <div class="skill-bar">
+                    <span class="skill-progress one"></span>
+                </div>
             </div>
-        </section>
+            <div class="skill-card">
+                <div class="skill-name">HTML & CSS</div>
+                <div class="skill-bar">
+                    <div class="skill-progress two"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar">
+                    <div class="skill-progress three"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-name">Responsive Design</div>
+                <div class="skill-bar">
+                    <div class="skill-progress four"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-name">Web Performance</div>
+                <div class="skill-bar">
+                    <div class="skill-progress five"></div>
+                </div>
+            </div>
+            <!-- <div class="skill-card">
+                <div class="skill-name">React & Modern Frameworks</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 80%"></div>
+                </div>
+            </div> -->
 
-        <footer class="footer">
-            <p>© 2026 DevMagic | All rights reserved</p>
-            <p>Designed by Sina.S</p>
-        </footer>
-    </div>
-    <script src="Project_Uni.js"></script>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section container" id="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm Sina Samadian a 22-year old,student in Computer Engineering. My passion lies in creating
+                    intuitive, visually stunning interfaces that solve real problems.
+                    With expertise in HTML, CSS, and JavaScript, I build responsive web applications that work
+                    seamlessly
+                    across all devices. I believe in clean code, user-centered design, and continuous learning.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-label">Experience</div>
+                        <div class="feature-value">1 Years</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-label">Projects</div>
+                        <div class="feature-value">6</div>
+                    </div>
+                    <!-- <div class="feature">
+                        <div class="feature-label">Technologies</div>
+                        <div class="feature-value">10+</div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="icons/profile_2.jpg" alt="About Sina">
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="section container feedback-section" id="feedback">
+        <h2 class="feedback-title">Share Your Feedback</h2>
+        <p class="feedback-subtitle">Your suggestions help me improve. I'd love to hear what you think!</p>
+
+        <!-- Feedback Form -->
+        <form class="feedback-form" id="feedbackForm">
+            <div class="form-group">
+                <label for="feedbackName">Your Name</label>
+                <input type="text" id="feedbackName" placeholder="Enter your name" maxlength="50" required>
+            </div>
+            <div class="form-group">
+                <label for="feedbackEmail">Email (Optional)</label>
+                <input type="email" id="feedbackEmail" placeholder="your.email@example.com" maxlength="100">
+            </div>
+            <div class="form-group full">
+                <label for="feedbackMessage">Your Feedback</label>
+                <textarea id="feedbackMessage" placeholder="Share your thoughts, suggestions, or feedback..."
+                    maxlength="500" required></textarea>
+            </div>
+            <div class="form-group submit-btn">
+                <button type="submit">Send Feedback</button>
+            </div>
+        </form>
+
+        <!-- Feedback List -->
+        <div class="feedback-list" id="feedbackList">
+            <div class="feedback-empty">
+                <p>No feedback yet. Be the first to share your thoughts!</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="container contact" id="contact">
+        <h2 class="contact-title">Let's Work Together</h2>
+        <p class="contact-subtitle">I'm always interested in hearing about new projects and opportunities.</p>
+        <div class="contact-links">
+            <a href="https://instagram.com/_.mr_sina" class="contact-link" target="_blank">
+                <img src="icons/Instagram-neon.webp" alt="Instagram">
+                Instagram
+            </a>
+            <a href="https://t.me/CNA_SM7" class="contact-link" target="_blank">
+                <img src="icons/Telegram-neon.webp" alt="Telegram">
+                Telegram
+            </a>
+            <a href="https://linkedin.com/in/sinasamadian" class="contact-link" target="_blank">
+                <img src="icons/Linkedin-neon.webp" alt="LinkedIn">
+                LinkedIn
+            </a>
+            <a href="mailto:Sinasamadian7@gmail.com" class="contact-link">
+                <img src="icons/Email-neon.webp" alt="Email">
+                Email
+            </a>
+            <a href="tel:+989192821689" class="contact-link">
+                <img src="icons/Call-phone-neon.webp" alt="Phone">
+                Click to call
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 DevMagic. All rights reserved.</p>
+            <p>&copy; Created By Sina.S</p>
+        </div>
+    </footer>
+    <script src="Final_project.js"></script>
 </body>
 
 </html>
